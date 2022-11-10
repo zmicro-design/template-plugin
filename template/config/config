@@ -1,0 +1,6 @@
+export PLUGIN_VM_NAME=vm
+
+export PLUGIN_VM_DATA=$(plugin::get_app_data_path $PLUGIN_VM_NAME)
+export PLUGIN_VM_LOGS=$(plugin::get_app_logs_path $PLUGIN_VM_NAME)
+export PLUGIN_VM_CONFIG=$(plugin::get_app_configs_path $PLUGIN_VM_NAME)/config
+
