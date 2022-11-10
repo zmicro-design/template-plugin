@@ -1,3 +1,3 @@
-NAME=package
-VERSION=v1.2.2
-DESCRIPTION="A package template use for template plugin."
+NAME=plugin
+VERSION=v1.0.1
+DESCRIPTION="A plugin template use for template plugin."
