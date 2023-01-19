@@ -57,10 +57,10 @@ jobs:
 
       - name: help
         run: |
-          package=$(echo ${{ github.repository }} | awk -F '/' '{print $2}' | sed 's/package-//')
-          zmicro $package help
+          plugin=$(echo ${{ github.repository }} | awk -F '/' '{print $2}' | sed 's/plugin-//')
+          zmicro $plugin help
 
       - name: version
         run: |
-          package=$(echo ${{ github.repository }} | awk -F '/' '{print $2}' | sed 's/package-//')
-          zmicro $package version
+          plugin=$(echo ${{ github.repository }} | awk -F '/' '{print $2}' | sed 's/plugin-//')
+          zmicro $plugin version
