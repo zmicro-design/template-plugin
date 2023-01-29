@@ -52,6 +52,9 @@ jobs:
           - macOS-latest
 
     steps:
+      - name: Setup Zmicro
+        uses: zmicro-design/action-setup-zmicro@v1
+
       - name: Install
         run: curl -o- https://raw.githubusercontent.com/${{ github.repository }}/master/install | sh -s -- ONE_LINE
 
