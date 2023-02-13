@@ -2,7 +2,7 @@
 
 help() {
   echo "Usage:"
-  echo "  zvm remove <name>"
+  echo "  zmicro {{.PLUGIN_NAME}} remove <name>"
 }
 
 core() {

@@ -1,45 +1,45 @@
-# VM - Virtual Machine Manager Plugin for [ZMicro](https://github.com/zcorky/zmicro)
+# {{ .PLUGIN_NAME | ToUpper  }} - Virtual Machine Manager Plugin for [ZMicro](https://github.com/zcorky/zmicro)
 
-[![Release](https://img.shields.io/github/tag/zmicro-design/plugin-vm.svg?label=Release)](https://github.com/zmicro-design/plugin-vm/tags)
-[![Build Status](https://github.com/zmicro-design/plugin-vm/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/zmicro-design/plugin-vm/actions/workflows/test.yml)
-[![GitHub issues](https://img.shields.io/github/issues/zmicro-design/plugin-vm.svg)](https://github.com/zmicro-design/plugin-vm/issues)
+[![Release](https://img.shields.io/github/tag/zmicro-design/plugin-{{.PLUGIN_NAME}}.svg?label=Release)](https://github.com/zmicro-design/plugin-{{.PLUGIN_NAME}}/tags)
+[![Build Status](https://github.com/zmicro-design/plugin-{{.PLUGIN_NAME}}/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/zmicro-design/plugin-{{.PLUGIN_NAME}}/actions/workflows/test.yml)
+[![GitHub issues](https://img.shields.io/github/issues/zmicro-design/plugin-{{.PLUGIN_NAME}}.svg)](https://github.com/zmicro-design/plugin-{{.PLUGIN_NAME}}/issues)
 
 ## Installation
 
 To install the package, run:
 
 ```bash
-zmicro plugin install vm
+zmicro plugin install {{.PLUGIN_NAME}}
 ```
 
 ### If you donot install [ZMicro](https://github.com/zcorky/zmicro):
 
 ```bash
 # CURL
-curl -o- https://raw.githubusercontent.com/zmicro-design/plugin-vm/master/install | bash
+curl -o- https://raw.githubusercontent.com/zmicro-design/plugin-{{.PLUGIN_NAME}}/master/install | bash
 
 # WGET
-wget -qO- https://raw.githubusercontent.com/zmicro-design/plugin-vm/master/install | bash
+wget -qO- https://raw.githubusercontent.com/zmicro-design/plugin-{{.PLUGIN_NAME}}/master/install | bash
 ```
 
 ## Usage
 
 ```markdown
-Virtual Machine Manager (v1.0.3)
+{{.PLUGIN_NAME}} ({{.PLUGIN_VERSION}})
 
-VM is a tool for managing virtual machines, based on multipass and lima.
+{{.PLUGIN_DESCRIPTION}}
 
 Usage:
-  zvm start <name>         - Start a virtual machine
-  zvm stop <name>          - Stop a virtual machine
-  zvm restart <name>       - Restart a virtual machine
-  zvm remove <name>        - Remove a virtual machine
-  zvm exec <name>          - Connect shell to a virtual machine
-  zvm inspect <name>       - Inspect a virtual machine
-  zvm help                 - Show help
+  zmicro {{.PLUGIN_NAME}} start <name>         - Start a virtual machine
+  zmicro {{.PLUGIN_NAME}} stop <name>          - Stop a virtual machine
+  zmicro {{.PLUGIN_NAME}} restart <name>       - Restart a virtual machine
+  zmicro {{.PLUGIN_NAME}} remove <name>        - Remove a virtual machine
+  zmicro {{.PLUGIN_NAME}} exec <name>          - Connect shell to a virtual machine
+  zmicro {{.PLUGIN_NAME}} inspect <name>       - Inspect a virtual machine
+  zmicro {{.PLUGIN_NAME}} help                 - Show help
 
 Example:
-  zvm start test01
+  zmicro {{.PLUGIN_NAME}} start test01
 ```
 
 ## License

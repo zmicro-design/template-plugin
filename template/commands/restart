@@ -2,7 +2,7 @@
 
 help() {
   echo "Usage:"
-  echo "  zvm restart <name>"
+  echo "  zmicro {{.PLUGIN_NAME}} restart <name>"
 }
 
 core() {

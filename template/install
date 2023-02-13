@@ -32,7 +32,7 @@ if [ "$1" = "ONE_LINE" ]; then
     curl -o- https://raw.githubusercontent.com/zcorky/zmicro/master/install | sh
   fi
 
-  zmicro plugin install vm
+  zmicro plugin install {{.PLUGIN_NAME}}
 else
   set -e
   

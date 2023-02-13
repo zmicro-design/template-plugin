@@ -1,28 +1,28 @@
 #!/bin/bash
 
 name() {
-  local version=$(plugin::get_version $PLUGIN_VM_NAME)
-  echo "Virtual Machine Manager ($(color::success $version))"
+  local version=$(plugin::get_version $PLUGIN_{{ .PLUGIN_NAME | ToUpper  }}_NAME)
+  echo "{{.PLUGIN_NAME}} ($(color::success $version))"
 }
 
 description() {
-  echo "VM is a tool for managing virtual machines, based on multipass and lima."
+  echo "{{.PLUGIN_DESCRIPTION}}"
 }
 
 usage() {
   echo "Usage:"
-  echo "  zvm start <name>         - Start a virtual machine"
-  echo "  zvm stop <name>          - Stop a virtual machine"
-  echo "  zvm restart <name>       - Restart a virtual machine"
-  echo "  zvm remove <name>        - Remove a virtual machine"
-  echo "  zvm exec <name>          - Connect shell to a virtual machine"
-  echo "  zvm inspect <name>       - Inspect a virtual machine"
-  echo "  zvm help                 - Show help"
+  echo "  zmicro {{.PLUGIN_NAME}} start <name>         - Start a virtual machine"
+  echo "  zmicro {{.PLUGIN_NAME}} stop <name>          - Stop a virtual machine"
+  echo "  zmicro {{.PLUGIN_NAME}} restart <name>       - Restart a virtual machine"
+  echo "  zmicro {{.PLUGIN_NAME}} remove <name>        - Remove a virtual machine"
+  echo "  zmicro {{.PLUGIN_NAME}} exec <name>          - Connect shell to a virtual machine"
+  echo "  zmicro {{.PLUGIN_NAME}} inspect <name>       - Inspect a virtual machine"
+  echo "  zmicro {{.PLUGIN_NAME}} help                 - Show help"
 }
 
 example() {
   echo "Example:"
-  echo "  zvm start test01"
+  echo "  zmicro {{.PLUGIN_NAME}} start test01"
 }
 
 core() {

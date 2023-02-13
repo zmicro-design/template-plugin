@@ -1,0 +1,5 @@
+#!/bin/bash
+
+os::inquirer PLUGIN_NAME "text" "Input Plugin Name" true
+os::inquirer PLUGIN_DESCRIPTION "text" "Input Plugin Description" true
+os::inquirer PLUGIN_VERSION "text" "Input Plugin Description" true "v1.0.0"
